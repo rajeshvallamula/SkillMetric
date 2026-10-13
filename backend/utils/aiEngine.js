@@ -23,7 +23,11 @@ const analyzeResumeWithAI = async (resumeText, targetRole) => {
 
   try {
     const genAI = new GoogleGenerativeAI(apiKey);
-    const modelNames = (process.env.GEMINI_MODELS || process.env.GEMINI_MODEL || 'gemini-2.5-flash')
+    const modelNames = (
+  process.env.GEMINI_MODELS ||
+  process.env.GEMINI_MODEL ||
+  'gemini-3.8-flash'
+)
       .split(',')
       .map((modelName) => modelName.trim())
       .filter(Boolean);
