@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-let apiBaseURL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+let apiBaseURL = import.meta.env.VITE_API_URL || 'https://skillmetric.onrender.com/api';
 
 // Self-healing: Automatically append /api if the configured URL is missing it
 if (apiBaseURL && !apiBaseURL.endsWith('/api') && !apiBaseURL.endsWith('/api/')) {
